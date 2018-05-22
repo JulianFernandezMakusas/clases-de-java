@@ -7,6 +7,10 @@ public class PersonaMain {
 		String apellido;
 		String dni;
 		int dni2;
+		String legajo;
+		int legajo2;
+		String padron;
+		int padron2;
 		ArrayList<Persona> nPersona = new ArrayList<Persona>();
 		Persona nuevaPersona = null;
 		while (JOptionPane.showInputDialog(null, "¿Desea ingresar datos?").equalsIgnoreCase("si")) {
@@ -15,6 +19,7 @@ public class PersonaMain {
 				apellido = JOptionPane.showInputDialog(null, "Ingrese su apellido", "Informacion", 1);
 				dni = JOptionPane.showInputDialog(null, "Ingrese su DNI", "Informacion", 1);
 				dni2 = Integer.parseInt(dni);
+				
 				nuevaPersona = new Persona(dni2, nombre, apellido);
 				nPersona.add(nuevaPersona);
 			} catch (Exception ex) {
